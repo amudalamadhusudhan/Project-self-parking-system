@@ -36,8 +36,8 @@ void setup()
 
 void loop()
 {
-  // dummyup();
-  // dummydown();
+  //dummyup();
+  //dummydown();
   // delay(10000);
   // ultrasonic();
   // parking();
@@ -46,8 +46,7 @@ void loop()
   Serial.println("Which operation would you like to perform ? ");
   while (Serial.available() == 0)
   {
-    /*The condition of the empty while loop is Serial.available()==0. When there is no input from the user, the Serial.available() function returns a zero value, making the condition true. The sketch stays inside the while loop until the user inputs something and the Serial.available() returns a non-zero value.
-     */
+/*The condition of the empty while loop is Serial.available()==0. When there is no input from the user, the Serial.available() function returns a zero value, making the condition true. The sketch stays inside the while loop until the user inputs something and the Serial.available() returns a non-zero value.*/     
   }
   int menuChoice = Serial.parseInt();
 
@@ -100,11 +99,10 @@ void unparking()
 {
   if (irs_3() == 0)
   {
-    Serial.println("choose the slot to unparking operation like to perform 1.slot1 unparking 2.slot 2 parking\n");
-    while (Serial.available() == 0)
+    Serial.println("choose the slot to perform 1.slot1 unparking 2.slot2 parking\n");
+    while (Serial.available() == 1)
     {
-      /*The condition of the empty while loop is Serial.available()==0. When there is no input from the user, the Serial.available() function returns a zero value, making the condition true. The sketch stays inside the while loop until the user inputs something and the Serial.available() returns a non-zero value.
-       */
+      /*The condition of the empty while loop is Serial.available()==0. When there is no input from the user, the Serial.available() function returns a zero value, making the condition true. The sketch stays inside the while loop until the user inputs something and the Serial.available() returns a non-zero value.*/
     }
     int Choice = Serial.parseInt();
 
@@ -112,17 +110,18 @@ void unparking()
     {
     case 1:
       // unparking code goes here
-      Serial.print("The unparking slot1 .... \n");
+      Serial.print("unparking slot1 .... \n");
       unparkslot1();
       break;
 
     case 2:
       // unparking code goes here
-      Serial.print("The unparking slot2..... \n");
+      Serial.print("unparking slot2..... \n");
+      unparkslot2();
       break;
 
     default:
-      Serial.println("Please choose a valid selection\n");
+      Serial.println("Please choose a valid selection for unparking\n");
     }
   }
   else
@@ -314,7 +313,7 @@ void motor1_rev2slot()
 void unparkslot1()
 {
   motor1_for(); // vertical down
-
+   delay(1000);
   motor2_rev(); // horizontal forward
   delay(1000);
   verticalupP(); // vertical up for 1second
@@ -322,9 +321,37 @@ void unparkslot1()
   motor2_for(); // horizontal backward
   delay(1000);
   motor1_rev(); // vertical Up for starting position
+  verticalupP();
+  delay(1000);
+  motor2_rev(); // horizontal forward
+  delay(1000);
+  verticaldownP(); // vertical down for 1second delay
+  delay(1000);
+  motor2_for(); // horizontal backward
   delay(1000);
 }
+void unparkslot2()
+{
+  motor1_for2slot(); // vertical down for 2nd slot
+  delay(1000);
+  motor2_rev(); // horizontal forward
+  delay(1000);
+ verticalupP(); // vertical down for 1second
+  delay(1000);
 
+  motor2_for(); // horizontal backward
+  delay(1000);
+
+  motor1_rev2slot(); // vertical Up for starting position 30 seconds
+  verticalupP();
+  delay(1000);
+  motor2_rev(); // horizontal forward
+  delay(1000);
+  verticaldownP(); // vertical down for 1second delay
+  delay(1000);
+  motor2_for(); // horizontal backward
+  delay(1000);
+}
 void dummyup()
 {
   digitalWrite(up, HIGH);
@@ -362,3 +389,4 @@ void dummybackward()
   digitalWrite(backwards, HIGH); // Deactivate both relays to brake the motor
   delay(300);                    // wait 2 seconds
 }
+
