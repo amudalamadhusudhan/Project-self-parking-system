@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Blue Diamond | Contact</title>
+<title>Self Parking System | Contact</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/cufon-yui.js"></script>
@@ -13,7 +13,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html" class="nobg">Blue Diamond</a></h1>
+        <h1><a href="index.html" class="nobg">Self Parking System</a></h1>
       </div>
       <div class="menu_nav">
         <ul>
@@ -26,7 +26,7 @@
       </div>
       <div class="clr"></div>
     </div>
-  </div>
+  <!-- </div>
   <div class="content">
     <div class="content_resize">
       <div class="mainbar">
@@ -137,5 +137,210 @@
     </div>
   </div>
 </div>
-<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body> -->
+</html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Photo Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/p1.jpg" style= width="200" height="250" alt="" class="left">
+
+    <!-- <img src="images/aa1.png" style= width="440" height="250" alt="" class="center"> -->
+
+    <img src="images/sp1.png" style=  width="40" height="250" alt="" class="right">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/p2.jpg" style= width="440" height="250" alt="" class="center">
+    <img src="images/sp2.PNG" style=  width="40" height="250" alt="" class="right">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/p3.jpg" style= width="440" height="250" alt="" class="center">
+    <img src="images/sp3.PNG" style=  width="40" height="250" alt="" class="right">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="images/p4.jpg" style= width="440" height="250" alt="" class="center">
+    <img src="images/sp4.PNG" style=  width="40" height="250" alt="" class="right">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="images/p5.jpg" style= width="440" height="250" alt="" class="center">
+    <img src="images/sp5.PNG" style=  width="40" height="250" alt="" class="right">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="images/p6.jpg" style= width="440" height="250" alt="" class="center">\
+    <img src="images/sp6.PNG" style=  width="40" height="250" alt="" class="right">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/p1.jpg" style= width="200" height="250" alt="" class="center" onclick="currentSlide(1)" alt="Arduino UNO Board">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/p2.jpg" style= width="400" height="250" alt="" class="center" onclick="currentSlide(2)" alt="Relay Board">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/p3.jpg" style= width="400" height="250" alt="" class="center" onclick="currentSlide(3)" alt="SMPS">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/p4.jpg" style= width="400" height="250" alt="" class="center" onclick="currentSlide(4)" alt="DC Motors">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/p5.jpg" style= width="400" height="250" alt="" class="center" onclick="currentSlide(5)" alt="Coupler">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/p6.jpg" style= width="400" height="250" alt="" class="center" onclick="currentSlide(6)" alt="IR Sensors">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
 </html>
